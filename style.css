@@ -61,7 +61,7 @@ h4 {
     position: relative;
 }
 
-.container1 > a:hover, .container2 a:hover,
+.container1 a:hover, .container2 a:hover,
 .container3 a:hover, .container4 a:hover {
     color: #9000ff;
     font-weight: bold;
