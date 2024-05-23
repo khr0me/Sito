@@ -79,7 +79,7 @@ h4 {
     left: 0;
     width: 100%;
     color: #a125ff;
-    transform: scaleY(-0.6);
+    transform: scaleY(-0.73);
     opacity: 0;
     transition: opacity 0.4s;
 }
