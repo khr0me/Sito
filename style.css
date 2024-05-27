@@ -36,7 +36,7 @@ h4 {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 75px;
+    height: 45px;
     max-width: 100%;
 }
 
@@ -45,10 +45,12 @@ h4 {
     margin-right: 3em;
     width: 12.5%;
     max-width: 100%;
+    min-width: 6%;
 }
 
 .container1 {
     padding-left: 1.5em;
+    max-width: 100%;
 }
 
 .container1 a, .container2 a,
@@ -57,8 +59,8 @@ h4 {
     text-decoration: none;
     color: white;
     transition: all 0.4s;
-    max-width: 100%;
     position: relative;
+    max-width: 100%;
 }
 
 .container1 a:hover, .container2 a:hover,
@@ -69,6 +71,7 @@ h4 {
     text-shadow: 0px 0px 25px #9000ff,
                  0px 0px 10px #9000ff,
                  0px 0px 3px #9000ff;
+    max-width: 100%;
 }
 
 .container1 a::after, .container2 a::after,
@@ -82,25 +85,88 @@ h4 {
     transform: scaleY(-0.73);
     opacity: 0;
     transition: opacity 0.4s;
+    max-width: 100%;
 }
 
 .container1 a:hover::after, .container2 a:hover::after,
 .container3 a:hover::after, .container4 a:hover::after {
     opacity: 0.25;
-}
-
-.main {
-    border-radius: 8px;
-    border: 1px solid black;
-    width: 1240px;
-    margin: 0 auto;
-    max-width: 100%;    
-}
-
-.main > p {
-    background: rgb(20, 20, 20);
-    margin: 0;
-    border-radius: 0.5rem;
-    padding: 1rem;
     max-width: 100%;
 }
+
+hr {
+    border: 1.6px solid black;
+    width: 1240px;
+    max-width: 100%;
+}
+
+.main > * {
+    margin: 0 auto;
+    padding: 20px;
+    width: 1200px;
+    max-width: 100%;
+}
+
+.main img {
+    padding-top: 10px;
+    padding-right: 5px;
+    height: 40px;
+    width: 40px;
+    max-width: 100%;
+}
+
+p, .social {
+    margin: 0 auto;
+    background: rgb(20, 20, 20);
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    width: max-content;
+    height: max-content;
+    max-width: 100%;
+}
+
+.social {   
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    max-width: 100%;
+}
+
+.social p {
+    border: none;
+    width: max-content;
+    padding-top: 1em;
+    height: 30px;
+    max-width: 100%;
+}
+
+.social p > a {
+    text-decoration: none;
+    color: #9000ff;
+    max-width: 100%;
+} 
+
+.contacts {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    height: 80vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas:
+       "header menu menu menu"
+       "hero hero hero hero"
+       "hero hero hero hero"
+       "main main image image"
+       "main main extra extra"
+       "banner banner banner banner";
+  }
