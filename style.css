@@ -1,20 +1,20 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
+    position: relative;
     background-color: rgb(30, 30, 30);
     font-size: 20px;
     font-family: Consolas, monospace;
     color: white;
-    max-width: 100%;
-}
-
-h4 {
-    margin: 8px;
-    text-align: right;
+    padding-bottom: 10.4rem;
+    box-sizing: inherit;
+    min-height: 100%;
     max-width: 100%;
 }
 
@@ -27,6 +27,7 @@ h4 {
 
 .banner img {
     width: 15em;
+    margin-top: 1rem;
     max-width: 100%;
 }
 
@@ -155,6 +156,19 @@ p, .social {
     max-width: 100%;
 }
 
+footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9000ff;
+    border-top: 2px solid black;
+    max-width: 100%;
+}
+
 @media (max-width: 1216px) {
     .banner img {
         width: 12em;
@@ -172,7 +186,15 @@ p, .social {
 
     .social {
         margin-bottom: 10px;
+        min-width: 360px;
+        padding-bottom: 0px;
     }
+
+    .main p{
+        font-size: 18px;
+        padding: 10px 0px;
+    }
+
 }
 
 @media (max-width: 501px) {
@@ -188,4 +210,9 @@ p, .social {
     .container3 a:hover, .container4 a:hover {
         font-size: 25px;
     } 
+
+    .main p{
+        font-size: 16px;
+        padding: 10px 0px;
+    }
 }
