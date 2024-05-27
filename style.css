@@ -155,18 +155,37 @@ p, .social {
     max-width: 100%;
 }
 
-.grid {
-    display: grid;
-    width: 100%;
-    gap: 10px;
-    height: 80vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40px 2fr repeat(4, 1fr);
-    grid-template-areas:
-       "header menu menu menu"
-       "hero hero hero hero"
-       "hero hero hero hero"
-       "main main image image"
-       "main main extra extra"
-       "banner banner banner banner";
-  }
+@media (max-width: 1216px) {
+    .banner img {
+        width: 12em;
+    }
+
+    .menu {
+        font-size: 25px;
+    }
+
+    .contacts {
+        height: 522px;
+        display: list-item;
+        text-align: center;
+    }
+
+    .social {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 501px) {
+    .banner img {
+        width: 10em;
+    }
+
+    .menu {
+        font-size: 20px;
+    }
+
+    .container1 a:hover, .container2 a:hover,
+    .container3 a:hover, .container4 a:hover {
+        font-size: 25px;
+    } 
+}
