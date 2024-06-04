@@ -117,7 +117,7 @@ hr {
     max-width: 100%;
 }
 
-p, .social {
+p, .social, .main div {
     margin: 0 auto;
     background: rgb(20, 20, 20);
     border: 1px solid black;
