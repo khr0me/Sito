@@ -117,13 +117,23 @@ hr {
     max-width: 100%;
 }
 
-p, .social, .main div {
+p, .social, .certificates {
     margin: 0 auto;
     background: rgb(20, 20, 20);
     border: 1px solid black;
     border-radius: 0.5rem;
     height: max-content;
     max-width: 100%;
+}
+
+.certificates img{
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+}
+
+.certificates p {
+    border: 0;
 }
 
 .social {   
@@ -170,7 +180,7 @@ footer {
     max-width: 100%;
 }
 
-@media (max-width: 1216px) {
+@media (max-width: 1242px) {
     .banner img {
         width: 12em;
     }
@@ -185,20 +195,20 @@ footer {
         text-align: center;
     }
 
-    .social {
+    .social, .certificates {
         margin-bottom: 10px;
         min-width: 360px;
         padding-bottom: 0px;
     }
 
-    .main p{
+    .main p, .certificates{
         font-size: 18px;
         padding: 10px 0px;
     }
 
 }
 
-@media (max-width: 501px) {
+@media (max-width: 505px) {
     .banner img {
         width: 10em;
     }
