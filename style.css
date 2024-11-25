@@ -126,6 +126,11 @@ p, .social, .certificates {
     max-width: 100%;
 }
 
+audio {
+    width: 30%;
+    max-width: 100%;
+}
+
 .certificates img{
     width: 150px;
     height: 150px;
