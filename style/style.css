@@ -1,8 +1,15 @@
+/* Reset and Base Styles */
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
   height: 100%;
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -13,22 +20,20 @@ body {
   font-family: monospace;
   color: white;
   padding-bottom: 10.4rem;
-  box-sizing: inherit;
   min-height: 100%;
   max-width: 100%;
 }
 
+/* Banner and Navigation */
 .banner {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  max-width: 100%;
 }
 
 .banner img {
   width: 15em;
   margin-top: 1rem;
-  max-width: 100%;
 }
 
 .menu {
@@ -38,24 +43,23 @@ body {
   justify-content: center;
   text-align: center;
   height: 45px;
-  max-width: 100%;
 }
 
+/* Navigation Containers */
 .container1,
 .container2,
 .container3,
 .container4 {
   margin-right: 3em;
   width: 12.5%;
-  max-width: 100%;
   min-width: 6%;
 }
 
 .container1 {
   padding-left: 1.5em;
-  max-width: 100%;
 }
 
+/* Navigation Links */
 .container1 a,
 .container2 a,
 .container3 a,
@@ -65,7 +69,6 @@ body {
   color: white;
   transition: all 0.4s;
   position: relative;
-  max-width: 100%;
 }
 
 .container1 a:hover,
@@ -76,9 +79,9 @@ body {
   font-weight: bold;
   font-size: 30px;
   text-shadow: 0px 0px 25px #9000ff, 0px 0px 10px #9000ff, 0px 0px 3px #9000ff;
-  max-width: 100%;
 }
 
+/* Link Reflection Effect */
 .container1 a::after,
 .container2 a::after,
 .container3 a::after,
@@ -92,7 +95,6 @@ body {
   transform: scaleY(-0.73);
   opacity: 0;
   transition: opacity 0.4s;
-  max-width: 100%;
 }
 
 .container1 a:hover::after,
@@ -100,32 +102,31 @@ body {
 .container3 a:hover::after,
 .container4 a:hover::after {
   opacity: 0.25;
-  max-width: 100%;
 }
 
+/* Main Content */
 hr {
   border: 1.6px solid black;
-  width: 1240px;
+  width: min(1240px, 100%);
   margin-bottom: 0;
-  max-width: 100%;
 }
 
 .main > * {
   margin: 0 auto;
   padding: 20px;
-  width: 1200px;
-  max-width: 100%;
+  width: min(1240px, 100%);
+  margin-right: clamp(0px, 22.4rem, 100%);
 }
 
 .main img {
-  padding-top: 10px;
-  padding-right: 5px;
+  padding: 10px 5px 0 0;
   height: 40px;
   width: 40px;
-  max-width: 100%;
+  object-fit: contain;
 }
 
-p,
+/* Content Boxes */
+.main p,
 .social,
 .certificates {
   margin: 0 auto;
@@ -133,31 +134,38 @@ p,
   border: 1px solid black;
   border-radius: 0.5rem;
   height: max-content;
-  max-width: 100%;
+  padding: 20px;
 }
 
+/* Remove nested background */
+.certificates p,
+.social p {
+  background: none;
+  border: none;
+  padding: inherit;
+  margin: 0;
+}
+
+/* Media Elements */
 audio {
   width: 30%;
-  max-width: 100%;
 }
 
 .certificates img {
   width: 150px;
   height: 150px;
-  max-width: 100%;
+  object-fit: contain;
 }
 
 .certificates p {
   border: 0;
 }
 
+/* Social Section */
 .social {
   display: inline-block;
   text-align: center;
-  width: 280px;
-  padding: 10px;
-  margin: 0px;
-  max-width: 100%;
+  width: min(280px, 100%);
 }
 
 .social p {
@@ -165,25 +173,26 @@ audio {
   width: max-content;
   padding-top: 1em;
   height: 30px;
-  max-width: 100%;
   background: none;
 }
 
 p > a {
   text-decoration: none;
   color: #9000ff;
-  max-width: 100%;
   background: none;
 }
 
 .contacts {
+  width: min(1240px, 100%);
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: space-between;
-  width: 1240px;
-  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
+/* Footer */
 footer {
   margin: 0 auto;
   text-align: center;
@@ -194,35 +203,33 @@ footer {
   bottom: 0;
   background-color: #9000ff;
   border-top: 2px solid black;
-  max-width: 100%;
 }
 
+/* Background */
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Media Queries */
 @media (max-width: 1242px) {
-  .banner img {
-    width: 12em;
-  }
-
-  .menu {
-    font-size: 25px;
-  }
-
   .contacts {
-    height: 522px;
-    display: list-item;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .social,
   .certificates {
-    margin-bottom: 10px;
-    min-width: 360px;
-    padding-bottom: 0px;
+    width: min(360px, 90%);
   }
 
   .main p,
   .certificates {
     font-size: 18px;
-    padding: 10px 0px;
   }
 }
 
@@ -244,15 +251,6 @@ footer {
 
   .main p {
     font-size: 16px;
-    padding: 10px 0px;
+    padding: 10px;
   }
-}
-
-#vanta-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
 }
