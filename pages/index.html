@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>khr0me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/style/style.css"
+    />
+  </head>
+
+  <body>
+    <div id="vanta-bg"></div>
+    <!-- AGGIUNTO -->
+    <div class="banner">
+      <img src="/img/alien.png" alt="my logo (alien)" onclick="ciao()" />
+    </div>
+    <!-- end banner -->
+
+    <div class="menu">
+      <div class="container1">
+        <a href="#home" data-text="Home">Home</a>
+      </div>
+      <div class="container2">
+        <a href="#projects" data-text="Projects">Projects</a>
+      </div>
+      <div class="container3">
+        <a href="#blog" data-text="Blog">Blog</a>
+      </div>
+      <div class="container4">
+        <a href="#contacts" data-text="Contacts">Contacts</a>
+      </div>
+    </div>
+    <!-- end menu -->
+
+    <hr />
+
+    <div class="main" id="content">
+      <!-- Il contenuto dinamico delle pagine sarà caricato qui -->
+    </div>
+    <!-- end main -->
+
+    <!-- Musica in background (rimane visibile su tutte le pagine) -->
+    <audio id="bg-music" autoplay loop>
+      <source src="" type="audio/mp3" />
+    </audio>
+
+    <footer>khr0me - 2024</footer>
+    <!-- end footer -->
+
+    <script src="/js/script.js"></script>
+    <script src="/js/router.js"></script>
+    <script src="/js/three.r134.min.js"></script>
+    <script src="/js/vanta.fog.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.FOG({
+          el: "#vanta-bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: true,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          highlightColor: 0x0,
+          midtoneColor: 0x0,
+          lowlightColor: 0x0,
+          baseColor: 0x422061,
+          speed: 2.4,
+        });
+      });
+    </script>
+  </body>
+</html>
